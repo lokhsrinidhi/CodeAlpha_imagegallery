@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+
+nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-right: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+nav ul li:hover,
+nav ul li.active {
+    background: white;
+    color: #ff4f81;
+}
+
+.title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+
+.gallery {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform .4s, box-shadow .4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+}
+
+#lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox img {
+    width: 70%;
+    max-width: 850px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px white;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 35px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#prev:hover, #next:hover {
+    background: #ffd700;
+}
+
+#prev { left: 40px; }
+#next { right: 40px; }
+
+
